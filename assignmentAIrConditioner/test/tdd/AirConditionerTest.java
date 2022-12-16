@@ -1,10 +1,12 @@
 package tdd;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
 public class AirConditionerTest {
+
 
 
     @Test
@@ -15,8 +17,7 @@ public class AirConditionerTest {
         // what s the name of the AC
         airConditioner.setProductName("Samsung");
         // check name
-        String productName = airConditioner.getProductName();
-        assertEquals("Samsung", productName);
+        assertEquals("Samsung", airConditioner.getProductName());
     }
 
     @Test
