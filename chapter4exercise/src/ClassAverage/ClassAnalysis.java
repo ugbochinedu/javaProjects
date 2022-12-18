@@ -1,3 +1,5 @@
+package ClassAverage;
+
 import java.util.Scanner;
 
 public class ClassAnalysis {
