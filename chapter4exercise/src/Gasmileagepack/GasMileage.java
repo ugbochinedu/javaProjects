@@ -20,6 +20,7 @@ public class GasMileage {
             gallonUsed = input.nextInt();
             totalGallonUsed = totalGallonUsed + gallonUsed;
             gallonCounter = gallonCounter + 1;
+            //gallonCounter++;
         }
 
         if (gallonCounter != 0){
@@ -49,7 +50,7 @@ public class GasMileage {
     }
 
     public void averageOfMilesDrivenPerGallon(){
-        double averageMilesDrivenPerGallon = totalMileDriven / totalGallonUsed;
+        double averageMilesDrivenPerGallon = (double) totalMileDriven / totalGallonUsed;
         System.out.printf("The average miles driven per gallon used is: %f%n", averageMilesDrivenPerGallon);
     }
 }

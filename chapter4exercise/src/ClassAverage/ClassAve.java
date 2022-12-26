@@ -7,7 +7,7 @@ public class ClassAve {
  int counter;
 
  Scanner scanner = new Scanner(System.in);
- public void calcAverage() {
+ public void calculateAverage() {
   int grade = 0;
 
   while (grade != -1) {
