@@ -35,7 +35,7 @@ public class SalaryCalculator {
 
     public double getEmployeeGrossPay() {
         double employeeGrossPay;
-        if (numberOfHours <= 40) employeeGrossPay = hourlyRate * numberOfHours;
+        if (numberOfHours> 0 && numberOfHours <= 40) employeeGrossPay = hourlyRate * numberOfHours;
         else {
             double employeePayForFirst40hours = 40 * hourlyRate;
             double employeePayForExcessOf40hours = (numberOfHours - 40) * (hourlyRate * 3 / 2);

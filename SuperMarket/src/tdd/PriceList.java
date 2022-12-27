@@ -46,21 +46,21 @@ public class PriceList {
                     "How many books do you want?");
             int bookQuantity = scanner.nextInt();
             setBookPrice(bookQuantity);
-            System.out.println("The total price of book(s) is " + totalBookPrice);
+            System.out.println("The total price of " + setBookPrice(bookQuantity) +" book(s) is " + totalBookPrice);
             System.out.println();
         } else if (userInput == 2) {
             System.out.println("The price of each shoe is 700.\n" +
                     "How many shoes do you want?");
             int shoeQuantity = scanner.nextInt();
             setShoePrice(shoeQuantity);
-            System.out.println("The total price of shoe(s) is " + totalShoePrice);
+            System.out.println("The total price of " + setShoePrice(shoeQuantity) +" shoe(s) is " + totalShoePrice);
             System.out.println();
         }else if (userInput == 3){
             System.out.println("The price of each bag is 400.\n" +
                     "How many bags do you want?");
             int bagQuantity = scanner.nextInt();
             setBagPrice(bagQuantity);
-            System.out.println("The total price of bag(s) is " + totalBagPrice);
+            System.out.println("The total price of " + setBagPrice(bagQuantity) +" bag(s) is " + totalBagPrice);
             System.out.println();
         }else{
             System.out.println("invalid input");
