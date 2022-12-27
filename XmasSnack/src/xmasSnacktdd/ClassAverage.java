@@ -8,12 +8,14 @@ public class ClassAverage {
     int gradeCounter;
     Scanner scanner = new Scanner(System.in);
     public void setStudentGrade() {
+        System.out.println("Enter Student Grade");
+        studentGrade = scanner.nextInt();
 
         while (gradeCounter < 10){
-            System.out.println("Enter Student Grade");
-            studentGrade = scanner.nextInt();
             totalStudentsGrade += studentGrade;
             gradeCounter = gradeCounter + 1;
+            System.out.println("Enter Student Grade");
+            studentGrade = scanner.nextInt();
         }
     }
     public int getStudentGrade() {

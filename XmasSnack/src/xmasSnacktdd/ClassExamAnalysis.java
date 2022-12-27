@@ -19,6 +19,7 @@ public class ClassExamAnalysis {
                 failures = failures + 1;
             } else {
                 System.out.println("Enter 1 or 2");
+                continue;
             }
             studentCounter = studentCounter + 1;
         }

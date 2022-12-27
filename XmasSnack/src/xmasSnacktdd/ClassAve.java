@@ -4,17 +4,20 @@ import java.util.Scanner;
 
 public class ClassAve {
  int total;
- int counter;
+ int counter = 0;
+ int grade = 0;
+
 
  Scanner scanner = new Scanner(System.in);
  public void calculateAverage() {
-  int grade = 0;
+  System.out.println("Enter grade or -1 to end");
+  grade = scanner.nextInt();
 
   while (grade != -1) {
-   System.out.println("Enter grade or -1 to end");
-   grade = scanner.nextInt();
    total = total + grade;
    counter = counter + 1;
+   System.out.println("Enter grade or -1 to end");
+   grade = scanner.nextInt();
   }
 
   if (counter != 0){
