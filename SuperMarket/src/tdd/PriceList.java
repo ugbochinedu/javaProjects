@@ -66,6 +66,13 @@ public class PriceList {
             System.out.println("invalid input");
         }
     }
+
+    public void usersChoiceEqualsNo(){
+        totalPriceOfAllProducts = totalBagPrice + totalShoePrice + totalBookPrice;
+        System.out.println();
+        System.out.println("The total price of your purchase is " + totalPriceOfAllProducts);
+        System.out.println("Thanks for your patronage");
+    }
     public void loopUserInput(){
         String usersChoice;
         do {
@@ -76,12 +83,10 @@ public class PriceList {
                 System.out.println(displayMenu());
                 getUserInput();
             } else if (usersChoice.equals("no")) {
-                totalPriceOfAllProducts = totalBagPrice + totalShoePrice + totalBookPrice;
-                System.out.println();
-                System.out.println("The total price of your purchase is " + totalPriceOfAllProducts);
-                System.out.println("Thanks for your patronage");
+               usersChoiceEqualsNo();
             } else {
                 System.out.println("invalid selection");
+                System.out.println();
                 loopUserInput();
             }
         } while (usersChoice.equals("yes"));
