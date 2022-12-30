@@ -46,17 +46,20 @@ public class SalesCalculator {
     }
 
     public void loopSalesCalculator(){
-        int answer = 0;
+        int answer;
         int counter = 0;
 
+        System.out.println("Do you wish to continue? Yes, press any 1 to continue; N0, press -1 to exit");
+        answer = userInput.nextInt();
+
         while (answer != -1){
-            System.out.println("Do you wish to continue? Yes, press any 1 to continue; N0, press -1 to exit");
-            answer = userInput.nextInt();
             setProductNumber();
             setQuantitySold();
             System.out.printf("The total sales of products is %.2f%n%n", getTotalSalesOfProduct());
-
             counter = counter + 1;
+
+            System.out.println("Do you wish to continue? Yes, press any 1 to continue; N0, press -1 to exit");
+            answer = userInput.nextInt();
         }
         System.out.println("Thanks for patronizing us");
     }
