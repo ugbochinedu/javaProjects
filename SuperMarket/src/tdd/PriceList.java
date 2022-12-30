@@ -82,6 +82,7 @@ public class PriceList {
                 System.out.println("Thanks for your patronage");
             } else {
                 System.out.println("invalid selection");
+                loopUserInput();
             }
         } while (usersChoice.equals("yes"));
     }
