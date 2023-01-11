@@ -3,10 +3,8 @@ package GlobalWarning;
 import java.util.Scanner;
 
 public class GlobalWarning {
-
     Scanner input = new Scanner(System.in);
-    int answer;
-
+    private int answer;
     private int correctAnswer = 0;
     private int wrongAnswer = 0;
 
@@ -22,6 +20,7 @@ public class GlobalWarning {
                                 
                 (4) None of the above
                 """);
+
         answer = input.nextInt();
 
         if(answer == 1){
@@ -42,6 +41,7 @@ public class GlobalWarning {
                                 
                 (4) Temperature
                 """);
+
         answer = input.nextInt();
 
         if(answer == 3){
@@ -62,6 +62,7 @@ public class GlobalWarning {
                                 
                 (4) Carbon monoxide
                 """);
+
         answer = input.nextInt();
 
         if(answer == 4){
@@ -82,6 +83,7 @@ public class GlobalWarning {
                                 
                 (4) All of the above
                 """);
+
         answer = input.nextInt();
 
         if(answer == 4){
@@ -103,6 +105,7 @@ public class GlobalWarning {
                                 
                 (4) Arctic Ocean
                 """);
+
         answer = input.nextInt();
 
         if(answer == 2){
