@@ -111,17 +111,12 @@ public class GlobalWarning {
             wrongAnswer++;
         }
     }
-
     public void displayCorrectAnswers(){
-        switch (correctAnswer){
-            case 5:
-                System.out.println("Excellent");
-                break;
-            case 4:
-                System.out.println("Very Good");
-                break;
-            default:
-                System.out.println("You scored " + correctAnswer +" correct answers."+" Time to brush up on your knowledge of global warming.\n");
+        switch (correctAnswer) {
+            case 5 -> System.out.println("Excellent");
+            case 4 -> System.out.println("Very Good");
+            default ->
+                    System.out.println("You scored " + correctAnswer + " correct answers." + " Time to brush up on your knowledge of global warming.\n");
         }
     }
 }
