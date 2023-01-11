@@ -13,7 +13,7 @@ public class ArcheryGame {
 
         System.out.println();
         System.out.print("""
-                Players     First Score    Second Score    Third Score     Sum Of Scores
+                Players    First Score    Second Score    Third Score     Sum Of Scores
                 """);
 
         for (counter = 0; counter < playerScores.length; counter++) {
@@ -21,10 +21,8 @@ public class ArcheryGame {
                 playerScores[counter][randomScore] = secureRandom.nextInt(10);
                 sum[counter]+= playerScores[counter][randomScore];
             }
+            //Optimize the code here with counter
+            System.out.printf("%s%2d%10d%15d%15d%15d%n","Player", counter + 1, playerScores[counter][0], playerScores[counter][1], playerScores[counter][2], sum[counter]);
         }
-        System.out.printf("%s%10d%15d%15d%15d%n","Player 1", playerScores[0][0], playerScores[0][1], playerScores[0][2], sum[0]);
-        System.out.printf("%s%10d%15d%15d%15d%n","Player 2", playerScores[1][0], playerScores[1][1], playerScores[1][2], sum[1]);
-        System.out.printf("%s%10d%15d%15d%15d%n","Player 3", playerScores[2][0], playerScores[2][1], playerScores[2][2], sum[2]);
-        System.out.printf("%s%10d%15d%15d%15d%n","Player 4", playerScores[3][0], playerScores[3][1], playerScores[3][2], sum[3]);
     }
 }
