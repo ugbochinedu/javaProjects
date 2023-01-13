@@ -4,12 +4,11 @@ import java.security.SecureRandom;
 
 public class ArcheryGame {
     SecureRandom secureRandom = new SecureRandom();
-
-    int[][] playerScores = new int[4][3];
+    private final int[][] playerScores = new int[4][3];
+    private final int[] sum = new int[4];
+    int counter;
+    int randomScore;
     public void processPlayerScores(){
-        int[] sum = new int[4];
-        int counter;
-        int randomScore;
 
         System.out.println();
         System.out.print("""
@@ -22,7 +21,22 @@ public class ArcheryGame {
                 sum[counter]+= playerScores[counter][randomScore];
             }
             //Optimize the code here with counter
-            System.out.printf("%s%2d%10d%15d%15d%15d%n","Player", counter + 1, playerScores[counter][0], playerScores[counter][1], playerScores[counter][2], sum[counter]);
+            System.out.printf("%s%2d%10d%15d%15d%15d%n","Player", counter + 1, playerScores[counter][0],
+                    playerScores[counter][1], playerScores[counter][2], sum[counter]);
+        }
+    }
+
+    public void CalcMaximumSum(){
+        int maximumSum = sum[0];
+        int maximumSumCounter;
+
+        for (maximumSumCounter = 0; maximumSumCounter < playerScores.length; maximumSumCounter++) {
+            if (sum[maximumSumCounter] > maximumSum) {
+                sum[maximumSumCounter] = maximumSum;
+                System.out.printf("""
+                        %s %d %s
+                        """, "Player", maximumSumCounter + 1, "wins");
+            }
         }
     }
 }
