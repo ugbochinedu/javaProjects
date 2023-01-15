@@ -42,10 +42,10 @@ public class StudentGrade {
         System.out.printf("%s", "STUDENT ");
 
         for (int subjectCounter = 0; subjectCounter < subjectHeader.length; subjectCounter++) {
-            System.out.printf("     %s%d","SUB", subjectCounter + 1);
+            System.out.printf("%9s%d","SUB", subjectCounter + 1);
         }
 
-        System.out.printf("    %s    %s   %s%n", "TOTAl", "AVE", "POS");
+        System.out.printf("%9s%7s%7s%n", "TOTAl", "AVE", "POS");
     }
     public void processGrade(){
 
@@ -57,15 +57,15 @@ public class StudentGrade {
 
         for (int student = 0; student < studentDetails.length ; student++) {
 
-            System.out.printf("%s %d     ","student", student + 1);
+            System.out.printf("%s %d","student", student + 1);
             for (scores = 0; scores <studentDetails[student].length ; scores++) {
-                System.out.printf("%d      ",studentDetails[student][scores]);
+                System.out.printf("%9d",studentDetails[student][scores]);
                 sum += studentDetails[student][scores];
                 average = sum / studentDetails[student].length;
             }
 
             System.out.printf("""
-                      %d     %d
+                    %10d%7d
                     """, sum, average);
         }
 
