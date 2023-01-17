@@ -3,8 +3,8 @@ package tdd;
 import java.util.Scanner;
 public class PriceList {
 
-    public int totalBookPrice;
-    public int totalBagPrice;
+    private int totalBookPrice;
+    private int totalBagPrice;
     private int totalShoePrice;
 
     int totalPriceOfAllProducts;
