@@ -63,7 +63,6 @@ public class StudentGrade {
                 sum += studentDetails[student][scores];
                 average = sum / studentDetails[student].length;
             }
-
             System.out.printf("""
                     %10d%7d
                     """, sum, average);
