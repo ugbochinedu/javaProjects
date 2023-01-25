@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class StudentsGrade {
     Scanner scanner = new Scanner(System.in);
-
     private int[] studentGrades;
     int studentsGradeCounter;
     int grade;
@@ -19,7 +18,6 @@ public class StudentsGrade {
             }else{
                 System.out.println("invalid input");
             }
-            System.out.println(studentGrades[studentsGradeCounter]);
         }
     }
 

@@ -1,9 +1,7 @@
 package StudentsGrade;
 
 import java.util.Scanner;
-
 public class StudentsGradeMain {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         StudentsGrade studentsGrade = new StudentsGrade();
