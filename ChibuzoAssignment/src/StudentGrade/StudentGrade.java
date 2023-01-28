@@ -6,16 +6,14 @@ public class StudentGrade {
     Scanner userInput = new Scanner(System.in);
     private int[][] studentDetails;
     int numberOfSubjects;
-    public void setGrade(){
-        System.out.println("How many students do you have?");
-        int numberOfStudents = userInput.nextInt();
+    int grade;
 
-        System.out.println("How many subjects do they offer?");
-        numberOfSubjects = userInput.nextInt();
+    public StudentGrade(int[][] studentDetails){
+        this.studentDetails = studentDetails;
+    }
+    public void setGrade(int[][] studentDetails){
+        this.studentDetails = studentDetails;
 
-        studentDetails = new int[numberOfStudents][numberOfSubjects];
-
-        int grade;
         int studentDetailsCounter;
         int studentGradeCounter;
 
@@ -47,28 +45,32 @@ public class StudentGrade {
 
         System.out.printf("%9s%7s%7s%n", "TOTAl", "AVE", "POS");
     }
-    public void processGrade(){
+    public void processGrade() {
 
         displayHeader();
 
-        int sum = 0;
-        int average = 0;
+        int average;
         int scores;
+        int sum = 0;
 
-        for (int student = 0; student < studentDetails.length ; student++) {
+        int student;
+        for (student = 0; student < studentDetails.length; student++) {
 
-            System.out.printf("%s %d","student", student + 1);
-            for (scores = 0; scores <studentDetails[student].length ; scores++) {
-                System.out.printf("%9d",studentDetails[student][scores]);
-                sum += studentDetails[student][scores];
-                average = sum / studentDetails[student].length;
+            System.out.printf("%s %d" , "student" , student + 1);
+            for (scores = 0; scores < studentDetails[student].length; scores++) {
+                System.out.printf("%9d" , studentDetails[student][scores]);
             }
+            sum += grade;
+            average = sum / studentDetails[student].length;
             System.out.printf("""
-                    %10d%7d
-                    """, sum, average);
+                %10d%7d
+                """, sum, average);
         }
 
+
 //        for (int[] studentDetail : studentDetails) {
+//            int sum = 0;
+//            int average = 0;
 //            for (int scores : studentDetail) {
 //                System.out.print(scores);
 //                sum += scores;
