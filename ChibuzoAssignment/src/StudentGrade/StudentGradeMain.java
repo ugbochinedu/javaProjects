@@ -10,7 +10,7 @@ public class StudentGradeMain {
         System.out.println("How many subjects do they offer?");
         int numberOfSubjects = userInput.nextInt();
         int[][] studentDetails = new int[numberOfStudents][numberOfSubjects];
-        StudentGrade studentGrade = new StudentGrade(studentDetails);
+        StudentGrade studentGrade = new StudentGrade(studentDetails,numberOfSubjects);
         studentGrade.setGrade(studentDetails);
         studentGrade.processGrade();
     }

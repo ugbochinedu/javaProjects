@@ -10,7 +10,7 @@ public class StudentsGradeMain {
         int[] studentGrades = new int[numberOfSubject];
         studentsGrade.setStudentsGrade(studentGrades);
         studentsGrade.Average();
-        System.out.printf("%s%d%n", "The maximum grade is ",  studentsGrade.getMaximumGrade(studentGrades));
-        System.out.printf("%s%d%n", "The minimum grade is ",  studentsGrade.getMinimumGrade(studentGrades));
+        studentsGrade.getMaximumGrade();
+        studentsGrade.getMinimumGrade();
     }
 }

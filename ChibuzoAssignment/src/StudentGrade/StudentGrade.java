@@ -8,8 +8,9 @@ public class StudentGrade {
     int numberOfSubjects;
     int grade;
 
-    public StudentGrade(int[][] studentDetails){
+    public StudentGrade(int[][] studentDetails, int numberOfSubjects){
         this.studentDetails = studentDetails;
+        this.numberOfSubjects = numberOfSubjects;
     }
     public void setGrade(int[][] studentDetails){
         this.studentDetails = studentDetails;
@@ -27,6 +28,7 @@ public class StudentGrade {
                 if (grade > 0 && grade <= 100) {
                     studentDetails[studentDetailsCounter][studentGradeCounter] = grade;
                 }else{
+                    //throw new ArithmeticException("invalid grade input");
                     System.out.println("invalid grade input");
                 }
             }
