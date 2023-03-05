@@ -44,4 +44,9 @@ import static org.junit.jupiter.api.Assertions.*;
         gtBank.withdraw(1000, 1, "pin");
         assertEquals(1000,gtBank.checkBalanceFor(1,"pin"));
     }
+
+    @Test
+     public void findBYAccountNumber_throwsException_IfAccountNumberIsWrongTest(){
+        assertThrows(IllegalArgumentException.class, ()->gtBank.findAccountByAccountNumber(2));
+    }
 }

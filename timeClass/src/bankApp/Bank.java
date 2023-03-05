@@ -33,12 +33,12 @@ public class Bank {
         foundAccount.deposit(amount);
     }
 
-    private Account findAccountByAccountNumber(int accountNumber) {
+    public Account findAccountByAccountNumber(int accountNumber) {
         for (Account account:accounts) {
             boolean accountNumberMatches = account.getAccountNumber() == accountNumber;
             if(accountNumberMatches) return account;
         }
-        return null;
+        throw new IllegalArgumentException("Account number not found");
     }
 
     public void transfer(int amount, int senderAccountNumber, int receiverAccountNumber, String senderPin) {
