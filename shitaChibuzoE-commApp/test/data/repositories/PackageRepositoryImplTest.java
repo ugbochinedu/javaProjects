@@ -19,8 +19,8 @@ class PackageRepositoryImplTest {
     public void saveOnePackage_countIsOneTest(){
         Package aPackage = new Package();
         assertEquals(0, packageRepository.count());
-        packageRepository.save(aPackage);
 
+        packageRepository.save(aPackage);
         assertEquals(1, packageRepository.count());
     }
 
@@ -63,5 +63,6 @@ class PackageRepositoryImplTest {
         assertEquals(foundPackage,secondPackage);
         assertNotEquals(foundPackage, aPackage);
     }
+
 
 }

@@ -7,9 +7,9 @@ import java.util.List;
 
 public class PackageRepositoryImpl implements PackageRepository{
 
-    private int count;
-
+    private int lastIdCreated;
     private List<Package> packages = new ArrayList<>();
+
     @Override
     public Package save(Package aPackage) {
         boolean isSaved = aPackage.getId() != 0;
@@ -18,50 +18,53 @@ public class PackageRepositoryImpl implements PackageRepository{
         return aPackage;
     }
     private void update(Package aPackage) {
-        Package savedPackage = findById(aPackage.getId());
-        int indexOfSavedPackage = packages.indexOf(savedPackage);
-        packages.set(indexOfSavedPackage,aPackage);
+//        Package savedPackage = findById(aPackage.getId());
+//        int indexOfSavedPackage = packages.indexOf(savedPackage);
+//        packages.set(indexOfSavedPackage,aPackage);
 
 //        Package savedPackage = findById(aPackage.getId());
 //        packages.remove(savedPackage);
-//        packages.add(aPackage);
+        delete(aPackage.getId());
+        packages.add(aPackage);
     }
 
     private void saveNewPackage(Package aPackage){
         packages.add(aPackage);
         aPackage.setId(generatePackageId());
-        count++;
+        lastIdCreated++;
     }
 
     @Override
     public Package findById(int id) {
         for (Package aPackage: packages) if(aPackage.getId() == id) return aPackage;
         return null;
+
     }
 
 
     private int generatePackageId() {
-        return count+1;
+        return lastIdCreated+1;
     }
 
     @Override
     public void delete(Package aPackage) {
-
+        packages.remove(aPackage);
     }
 
     @Override
     public void delete(int id) {
-
+        Package foundPackage = findById(id);
+        delete(foundPackage);
     }
 
     @Override
     public List<Package> findAll() {
-        return null;
+        return packages;
     }
 
 
     @Override
     public long count() {
-        return count;
+        return lastIdCreated;
     }
 }

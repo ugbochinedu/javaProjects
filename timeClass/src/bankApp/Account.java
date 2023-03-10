@@ -19,7 +19,7 @@ public class Account {
 
     public int checkBalance(String pin){
         if(pinIsCorrect(pin)) return balance;
-        else throw new IllegalArgumentException("Invalid Pin");
+        throw new IllegalArgumentException("Invalid Pin");
     }
 
     private boolean pinIsCorrect(String pin){
@@ -28,7 +28,7 @@ public class Account {
     public void withdraw(int amount, String pin){
         boolean amountIsValid = amount > 0 && amount < balance;
         if (pinIsCorrect(pin) && amountIsValid) balance -= amount;
-        else throw new IllegalArgumentException("You can't withdraw the amount you imputed");
+        throw new IllegalArgumentException("You can't withdraw the amount you imputed");
     }
 
     public int getAccountNumber() {
