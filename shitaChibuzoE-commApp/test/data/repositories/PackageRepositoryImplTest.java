@@ -64,5 +64,26 @@ class PackageRepositoryImplTest {
         assertNotEquals(foundPackage, aPackage);
     }
 
+    @Test
+    @DisplayName("Delete Test")
+    public void deletePackages(){
+        Package aPackage = new Package();
+        packageRepository.save(aPackage);
+        packageRepository.delete(aPackage);
+        System.out.println(aPackage.getId());
+        assertEquals(0,packageRepository.count());
+    }
 
+    @Test
+    @DisplayName("find all")
+    public void findAll(){
+        Package aPackage = new Package();
+        packageRepository.save(aPackage);
+        Package aPackage1 = new Package();
+        packageRepository.save(aPackage1);
+        Package aPackage2 = new Package();
+        packageRepository.save(aPackage2);
+        packageRepository.findAll();
+
+    }
 }

@@ -41,7 +41,6 @@ public class PackageRepositoryImpl implements PackageRepository{
 
     }
 
-
     private int generatePackageId() {
         return lastIdCreated+1;
     }
