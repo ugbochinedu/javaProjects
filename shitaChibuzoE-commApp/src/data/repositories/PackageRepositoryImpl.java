@@ -14,7 +14,6 @@ public class PackageRepositoryImpl implements PackageRepository{
     public Package save(Package aPackage) {
         boolean isSaved = aPackage.getId() != 0;
         if (isSaved) update(aPackage); else saveNewPackage(aPackage);
-
         return aPackage;
     }
     private void update(Package aPackage) {
