@@ -14,8 +14,9 @@ public class Bank {
     }
     public void createAccountFor(String accountName, String accountPin){
         int accountNumber = generateAccountNumber();
-        Account newAccount = new Account(accountNumber, accountName, accountPin);
-        accounts.add(newAccount);
+        accounts.add(new Account(accountNumber,accountName,accountPin));
+//        Account newAccount = new Account(accountNumber, accountName, accountPin);
+//        accounts.add(newAccount);
     }
     private int generateAccountNumber() {
         return ++lastAccountNumberGenerated;

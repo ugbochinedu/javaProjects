@@ -1,5 +1,8 @@
 package ArrayAssignment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 
     public String fullName;
@@ -7,8 +10,10 @@ public class Student {
     public int pythonScore;
     public int javascriptScore;
 
+
     public String getFullName() {
         return fullName;
+
     }
 
     public void setFullName(String fullName) {
