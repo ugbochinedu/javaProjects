@@ -1,5 +1,6 @@
 package StudentsGrade;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StudentsGrade {
@@ -50,5 +51,15 @@ public class StudentsGrade {
         }
         System.out.println("The minimum score is " + minimumGrade);
         return minimumGrade;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentsGrade{" +
+                "scanner=" + scanner +
+                ", studentGrades=" + Arrays.toString(studentGrades) +
+                ", studentGradeCounter=" + studentGradeCounter +
+                ", grade=" + grade +
+                '}';
     }
 }

@@ -1,19 +1,22 @@
 package tdd;
 
-import org.testng.annotations.BeforeClass;
+import org.junit.jupiter.api.BeforeEach;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
 public class AirConditionerTest {
-
-
+    AirConditioner airConditioner;
+    @BeforeEach
+    void  setUp(){
+        airConditioner = new AirConditioner();
+    }
 
     @Test
 
     public void ProductName(){
         // Given a new AC
-        AirConditioner airConditioner = new AirConditioner();
+        ;
         // what s the name of the AC
         airConditioner.setProductName("Samsung");
         // check name
@@ -23,7 +26,6 @@ public class AirConditionerTest {
     @Test
 
     public void isOn(){
-        AirConditioner airConditioner = new AirConditioner();
         airConditioner.setOn(true);
         assertTrue(airConditioner.isOn());
     }
@@ -32,7 +34,6 @@ public class AirConditionerTest {
 
     public  void isOff(){
         // given an airConditioner
-        AirConditioner airConditioner = new AirConditioner();
         airConditioner.setOn(true);
         airConditioner.setOff(false);
         assertFalse(airConditioner.isOff());
@@ -51,7 +52,6 @@ public class AirConditionerTest {
     @Test
 
     public void TemperatureLessThanLowestTemperature(){
-        AirConditioner airConditioner = new AirConditioner();
         airConditioner.isOn();
         airConditioner.setTemperature(14);
         assertEquals(16, airConditioner.getTemperature());
@@ -60,7 +60,6 @@ public class AirConditionerTest {
     @Test
 
     public void TemperatureGreaterThanHighestTemperature(){
-        AirConditioner airConditioner = new AirConditioner();
         airConditioner.isOn();
         airConditioner.setTemperature(31);
         assertEquals(30, airConditioner.getTemperature());
@@ -69,7 +68,6 @@ public class AirConditionerTest {
     @Test
 
     public void IncreaseTemperature(){
-        AirConditioner airConditioner = new AirConditioner();
         airConditioner.isOn();
         airConditioner.setTemperature(28);
         airConditioner.increaseTemp();
@@ -79,7 +77,6 @@ public class AirConditionerTest {
     @Test
 
     public void DecreaseTemperature(){
-        AirConditioner airConditioner = new AirConditioner();
         airConditioner.isOn();
         airConditioner.setTemperature(30);
         airConditioner.decreaseTemperature();

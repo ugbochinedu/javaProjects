@@ -12,6 +12,6 @@ public class Shapes {
      shapes.forEach(Shape::draw);
      }
     public void filter(Filter filter) {
-         shapes.forEach( s -> filter.applyTo(s) );
+         shapes.forEach(filter::applyTo);
     }
 }
