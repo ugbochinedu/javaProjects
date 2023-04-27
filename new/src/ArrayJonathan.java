@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 public class ArrayJonathan {
+    static int[] array = {1,8,3,4,5};
     public static void main(String[] args) {
-        int[] array = {1,8,3,4,5};
+
         int[] newArray =new int[5];
         ArrayList<Integer> newArray1 = new ArrayList<>();
 //        int sum = 0;
