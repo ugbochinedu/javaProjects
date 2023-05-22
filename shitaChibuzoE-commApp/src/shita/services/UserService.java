@@ -8,5 +8,5 @@ public interface UserService {
 
     RegisterUserResponse registerNewUser(RegisterUserRequest request);
 
-    User findUser(int id);
+    User findUser(String id);
 }

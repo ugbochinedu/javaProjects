@@ -1,15 +1,8 @@
 package shita.data.repositories;
 
+import org.springframework.data.mongodb.repository.MongoRepository;
 import shita.data.model.User;
 
-import java.util.List;
+public interface UserRepository extends MongoRepository<User, String> {
 
-public interface UserRepository {
-
-    User save(User user);
-    void delete(User user);
-    void delete(int id);
-    List<User> findAll();
-    User findById(int id);
-    long count();
 }

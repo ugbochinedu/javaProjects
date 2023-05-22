@@ -2,7 +2,7 @@ package shita.dto.responses;
 
 public class RegisterUserResponse {
     private String firstName;
-    private int id;
+    private String id;
 
     public String getFirstName() {
         return firstName;
@@ -12,11 +12,11 @@ public class RegisterUserResponse {
         this.firstName = firstName;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

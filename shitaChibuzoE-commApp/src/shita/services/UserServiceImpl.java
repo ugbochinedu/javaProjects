@@ -1,15 +1,17 @@
 package shita.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import shita.data.model.User;
 import shita.data.repositories.UserRepository;
-import shita.data.repositories.UserRepositoryImpl;
 import shita.dto.requests.RegisterUserRequest;
 import shita.dto.responses.RegisterUserResponse;
 import shita.utils.Mapper;
 
+@Service
 public class UserServiceImpl implements UserService{
-    //private RegisterUserRequest userRepository;
-    UserRepository userRepository = new UserRepositoryImpl();
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     public RegisterUserResponse registerNewUser(RegisterUserRequest request) {
@@ -20,7 +22,9 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User findUser(int id) {
-        return userRepository.findById(id);
+    public User findUser(String id) {
+        var user = userRepository.findById(id);
+        if (user.isEmpty()) throw new IllegalArgumentException("User does not exist");
+        return userRepository.findById(id).get();
     }
 }

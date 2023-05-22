@@ -27,7 +27,7 @@ public class Main {
     }
 
     private static void findRegisteredUser() {
-        int userid = collectUserInput("Enter user id");
+        String userid = collectUserInput("Enter user id");
         display(userController.findUserId(userid).toString());
     }
 
@@ -35,8 +35,8 @@ public class Main {
         JOptionPane.showMessageDialog(null, prompt);
     }
 
-    private static int collectUserInput(String mainMenu) {
-        return Integer.parseInt(JOptionPane.showInputDialog(mainMenu));
+    private static String collectUserInput(String mainMenu) {
+        return (JOptionPane.showInputDialog(mainMenu));
     }
 
     private static void registerUser() {
