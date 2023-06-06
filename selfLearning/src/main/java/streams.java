@@ -17,6 +17,5 @@ public class streams {
       int[] arr = {1,2,3,4,5,6,7,4};
         System.out.println( IntStream.of(arr).mapToObj(String::valueOf).collect(Collectors.joining("")));
         System.out.println(IntStream.of(arr).sorted().mapToObj(String::valueOf).collect(Collectors.joining("")));
-        System.out.println(Arrays.stream(arr).sorted().collect(Collectors.toList()));
     }
 }
